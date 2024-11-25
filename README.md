@@ -8,11 +8,13 @@ To reproduce the experiments, you need to run `experiments/optical_lattice.jl` f
 
 ## Environment
 
-You should run the experiments and evaluations in the provided package environment, i.e., first run `using Pkg; Pkg.activate("./Riemannian-coupledGPE/"); Pkg.instantiate();` inside julia, and when calling the files, use the `--project` flag, e.g. `julia --project=../Riemannian-coupledGPE/ experiments/optical_lattice.jl`.
+You should run the experiments and evaluations in the provided package environment, i.e., first run `using Pkg; Pkg.activate("./Riemannian-coupledGPE/"); Pkg.instantiate();` inside julia, and when calling the files, use the `--project` flag, e.g. `julia --project=Riemannian-coupledGPE/ experiments/optical_lattice.jl`.
 
 ## Caveats
 
 When using `Newton_method` as `optimization_algorithm`, you have to choose `:A0normNewton` as preconditioner, but only in this case! When used together with a gradient descent method (for which you have to use `:A0norm`), this will cause unpredictible behavior. This unfortunately has to do with missing size checks in `IncompleteLU.jl` and a disabled bounds check there.
+
+Depending on your system, the 2D experiments might be too large too compute. In order to at least get the general flavour, you can try to run them with a lower n_elements (e.g. 2^6 and an l_ε of 5).
 
 # Citation
 When using this repository in your own work, please cite our paper:
