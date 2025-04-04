@@ -149,9 +149,10 @@ function loop_alternatingly!(
             # if we just updated, we can skip the first one
             if !(update_hamiltonian_at_each_step && i == 1) 
                 update_hamiltonian!(gpe_system, i)
+                Mϕi_valid = variable_storage.Mϕ_isValid[i]
                 invalidate_cache!(variable_storage, i)
-                # we only changed A, so Mϕ remains valid (but not Aϕ, R, etc.)
-                variable_storage.Mϕ_isValid[i] = true
+                # we only changed A, so Mϕ remains valid if it was before (but not Aϕ, R, etc.)
+                variable_storage.Mϕ_isValid[i] = Mϕi_valid
             end
             gradient_function!(
                 riemannian_gradient[i], ϕ[i], gpe_system, i, solver, variable_storage;
