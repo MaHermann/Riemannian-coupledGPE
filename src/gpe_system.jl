@@ -73,13 +73,6 @@ function update_weighted_mass_matrix!(gpe_system, ϕ, i, j)
     )
 end
 
-function update_weighted_mass_matrix!(gpe_system, ϕ, i)
-    assemble_density_weighted_mass_matrix!(
-        gpe_system.weighted_mass_matrices[i][j], ϕ[i], 
-        gpe_system.grid_context, gpe_system.Ne,
-    )
-end
-
 function update_hamiltonian!(gpe_system)
     p = size(gpe_system.masses, 1)
     for i in 1:p

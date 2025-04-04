@@ -39,9 +39,9 @@ export gradient_L2, gradient_energy_adaptive, gradient_L2_preconditioned,
 
 export ConstantStepSize, reset!
 
-export PFrame, inner, density, plot_PFrame, plot_PFrame!
+export PFrame, density, plot_PFrame, plot_PFrame!
 
-export ConstantPotential, rescale_potential, create_periodic_potential_2D, add_potentials,
+export ConstantPotential, create_periodic_potential_2D, add_potentials,
         create_random_checkerboard_potential_2D, plot_potential_1D, plot_potential_1D!,
         plot_potential_2D, plot_potential_2D!
 

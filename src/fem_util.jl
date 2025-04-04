@@ -343,7 +343,7 @@ function assemble_density_weighted_mass_matrix!(
 end
 
 function assemble_density_weighted_mass_matrix!(u, v, grid_context)
-    return assemble_density_matrix!(
+    return assemble_density_weighted_mass_matrix!(
         allocate_matrix(grid_context.dof_handler),
         u, v, grid_context,
         zeros(
