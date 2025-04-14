@@ -64,7 +64,7 @@ plot(main_plot, plots..., size = (2000, 2000))
 ##
 β = 10
 for experiment in experiments
-    if experiment.parameters["β"] == 10
+    if experiment.parameters["β"] == β
         n_iter = findfirst(
             sqrt.(sum(experiment.log["residual_values"].^2, dims = 2)) .< 1e-8
         )
