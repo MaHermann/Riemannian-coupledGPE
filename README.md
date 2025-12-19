@@ -19,11 +19,12 @@ Depending on your system, the 2D experiments might be too large too compute. In 
 # Citation
 When using this repository in your own work, please cite our paper:
 
-    @article{altmann2024riemannian,
-        title = {Riemannian optimisation methods for ground states of multicomponent Bose-Einstein condensates},
-        author = {Altmann, Robert and Hermann, Martin and Peterseim, Daniel and Stykel, Tatjana},
-        year = {2024},
-        journal = {ArXiv e-print 2411.09617},
-        number = {},
-        doi = {10.48550/arXiv.2411.09617},
-    }
+	@article{altmann2025riemannian,
+	    title={Riemannian optimization methods for ground states of multicomponent Bose--Einstein condensates},
+	    author={Altmann, Robert and Hermann, Martin and Peterseim, Daniel and Stykel, Tatjana},
+	    journal={IMA Journal of Numerical Analysis},
+	    pages={draf046},
+	    year={2025},
+	    publisher={Oxford University Press}
+	}
+
